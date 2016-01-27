@@ -1,0 +1,285 @@
+<div class="page page-dashboard" ng-controller="DashboardCtrl">
+	
+	<div class="page-wrap">
+
+		<div class="row">
+			<!-- dashboard header -->
+			<div class="col-md-12">
+				<div class="dash-head clearfix mt15 mb20">
+					<div class="left">
+						<h4 class="mb5 text-light">Welcome to IPLON</h4>
+						
+					</div>
+					<!--<div class="right mt10">
+						<span sparkline type="bar" bar-color="#4CAF50">10,8,4,10,7,0,3,4,6,5,9,12,9</span>
+						<h5 class="text-bold mb0 mt5">$1,33,404</h5>
+					</div>-->
+				</div>
+			</div>
+		</div> <!-- #end row -->
+
+		<!-- mini boxes -->
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-primary text-bold">{{totGen}} MW</h4>
+								<h5 class="text-light mb0">Energy Export </h5>
+							</div>
+							<div class="right ion ion-arrow-graph-up-right icon"></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-primary">
+						<!--<p class="mt0 mb0 left">% change</p>
+						<span sparkline class="right" type="bar" bar-color="#fff" width="1.15em" height="1.15em">10,8,9,3,5,8,5</span>-->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-success text-bold">{{impPwr}} MW</h4>
+								<h5 class="text-light mb0">Import Power</h5>
+							</div>
+							<div class="right ion ion-arrow-graph-down-right icon"></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-success">
+						<!--<p class="mt0 mb0 left">% change</p>
+						<span sparkline class="right" type="bar" bar-color="#fff" width="1.15em" height="1.15em">3,5,9,8,6,10</span>-->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-info text-bold">{{noCommDev}}</h4>
+								<h5 class="text-light mb0">No Communication</h5>
+							</div>
+							<div class="right ion ion-radio-waves icon"></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-info">
+						<!--<p class="mt0 mb0 left">% change</p>
+						<span sparkline class="right" type="bar" bar-color="#fff" width="1.15em" height="1.15em">5,9,9,8,6,6</span>-->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-pink text-bold">{{alarms}}</h4>
+								<h5 class="text-light mb0">Pending Alarms</h5>
+							</div>
+							<div class="right ion ion-speakerphone icon"></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-pink">
+						<!--<p class="mt0 mb0 left">% change</p>
+						<span sparkline class="right" type="bar" bar-color="#fff" width="1.15em" height="1.15em">6,4,9,10,6,2</span>-->
+					</div>
+				</div>
+			</div>
+			<!-- #end mini boxes -->
+		</div> <!-- #end row -->
+
+		<!-- row -->
+		<div class="row">
+	
+
+			<div class="col-md-6">
+				<div class="panel panel-default mb20 panel-hovered">
+					<div class="panel-heading">Production</div>
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="storagePercent" options="storageOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{totGen}}</strong>
+										<p class="xsmall">Today Generation (MWh)</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="serverPercent" options="serverOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{pkPower}}</strong>
+										<p class="xsmall">Peak Power</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="clientPercent" options="clientOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{actvPwr}}</strong>
+										<p class="xsmall">Active Power</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+
+                        <ul class="list-unstyled">
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="storagePercent" options="storageOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{storagePercent}}</strong>
+										<p class="xsmall">Performance Ratio</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="serverPercent" options="serverOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{slrRdtn}}</strong>
+										<p class="xsmall">Irradiation</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="clientPercent" options="clientOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{windSpd}}</strong>
+										<p class="xsmall">Windspeed</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+
+            <!-- browser share -->
+			<div class="col-md-6">
+				<div class="panel panel-default mb20 panel-hovered">
+					<div class="panel-heading">Power Loss Share</div>
+					<div class="panel-body text-center">
+						<c3-chart id="c3chartbrowsershare" config="browserconfig"></c3-chart>
+					</div>
+				</div>
+			</div> 
+
+
+			
+
+
+
+		</div> <!-- #end row -->
+
+
+		<div class="row">
+		
+
+
+			<!-- recent activities -->
+			<div class="col-md-4">
+				<div class="panel panel-default mb20 activities">
+					<div class="panel-heading">Activities</div>
+					<div class="panel-body">
+						<ul class="list-unstyled">
+
+							<li class="primary">
+								<span class="point"></span>
+								<span class="time small text-muted">2 mins ago</span>
+								<p>Database backup program running</p>
+							</li>
+
+							<li class="primary">
+								<span class="point"></span>
+								<span class="time small text-muted">2 mins ago</span>
+								<p>Panel cleaned in block - B07</p>
+							</li>
+							<li class="success">
+								<span class="point"></span>
+								<span class="time small text-muted">1 hour ago</span>
+								<p>Transformer Oil Changed in Neemuch</p>
+							</li>
+							<li class="warning">
+								<span class="point"></span>
+								<span class="time small text-muted">4:30 p.m</span>
+								<p>Server Load is at 80 % </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- #end recent activities -->
+
+
+
+			<!-- Project stats -->
+			<div class="col-md-8">
+				<div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+					<div class="panel-heading">Performance</div>
+					<div class="panel-body">	
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th class="col-sm-5">Segment</th>
+									<th class="col-sm-1">Performance</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Inverter</td>
+									<td class="text-center">
+										<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">2,8</span>
+									</td>
+									<td>20 Jan 2016</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+									<td>SMU</td>
+									<td class="text-center">
+										<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>20 Jan 2016</td>
+								</tr>
+
+								<tr>
+									<td>3</td>
+									<td>Transformer</td>
+									<td class="text-center">
+										<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">7,3</span>
+									</td>
+									<td>20 Jan 2016</td>
+								</tr>
+
+								<tr>
+									<td>4</td>
+									<td>Cable</td>
+									<td class="text-center">
+										<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>20 Jan 2016</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div> 
+
+			
+
+		</div> <!-- #end row -->
+
+
+	</div> <!-- #end page-wrap -->
+</div>

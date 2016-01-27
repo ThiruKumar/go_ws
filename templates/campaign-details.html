@@ -1,0 +1,138 @@
+<div class="page page-dashboard" ng-controller="DashboardCtrl">
+	
+	<div class="page-wrap">
+
+		<div class="row">
+			<!-- dashboard header -->
+			<div class="col-md-12">
+				<div class="dash-head clearfix mt15 mb20">
+					<div class="left">
+						<h4 class="mb5 text-light">Single Image Add</h4>
+						
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5">Views : 1,024</h5>
+					</div>
+				</div>
+			</div>
+		</div> <!-- #end row -->
+
+	
+		<!-- row -->
+		<div class="row">
+
+			<!-- Analytics -->
+			<div class="col-md-7">
+				<div class="panel panel-default mb20 panel-hovered analytics">
+					<div class="panel-heading">Analytics</div>
+					<div class="panel-body">
+						<c3-chart id="c3chartAnalytics" config="analyticsconfig"></c3-chart>
+						</div>
+				</div>
+				
+			</div> <!-- #end analytics -->
+
+
+			<!-- recent activities -->
+			<div class="col-md-5 col-sm-5">
+				<div class="panel panel-default mb20 panel-hovered">
+					<div class="panel-heading">View Details</div>
+					<div class="panel-body text-center">
+						<c3-chart id="c3chartbrowsershare" config="browserconfig"></c3-chart>
+					</div>
+				</div>
+			</div>
+			<!-- #end recent activities -->
+				
+		</div> <!-- #end row -->
+
+		
+		<!-- row -->
+		<div class="row">
+			
+		<!-- Project stats -->
+			<div class="col-md-12 col-lg-12">
+				<div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+					<div class="panel-heading">Add Stats</div>
+					<div class="panel-body">	
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Categories</th>
+									<th class="col-sm-5">Ads Type</th>
+									<th class="col-sm-1">Reports</th>
+									<th>No of Count</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Total View</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#04a5b8,#eee]" width="2em" height="2em">2,8</span>
+									</td>
+									<td>343</td>
+								</tr>
+
+								<tr>
+									<td>Liked</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#eb08d8,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>565</td>
+								</tr>
+
+								<tr>
+									<td>Saved</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#d3ae04,#eee]" width="2em" height="2em">7,3</span>
+									</td>
+									<td>222</td>
+								</tr>
+
+								<tr>
+									<td>Called</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#9383f6,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>123</td>
+								</tr>
+                                
+                                <tr>
+									<td>Call Back</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#371cd9,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>67</td>
+								</tr>
+                                
+                                <tr>
+									<td>Share</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>555</td>
+								</tr>
+                                
+                                <tr>
+									<td>Reviews</td>
+									<td>Video</td>
+									<td class="text-center">
+									<span sparkline type="pie" slice-colors="[#d91c1c,#eee]" width="2em" height="2em">4,6</span>
+									</td>
+									<td>754</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div> 
+		</div> <!-- #end row -->
+
+	</div> <!-- #end page-wrap -->
+</div>

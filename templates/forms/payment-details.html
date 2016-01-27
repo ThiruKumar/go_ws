@@ -1,0 +1,220 @@
+<div class="page page-forms-wizard">
+
+	<ol class="breadcrumb breadcrumb-small">
+		<li>Home</li>
+		<li class="active"><a href="#/forms/payment-details">Payment Details</a></li>
+	</ol>
+
+
+	<div class="page-wrap">
+		
+		<!-- row -->
+		<div class="row">
+			<!-- minimal form interface -->
+			<div class="col-md-10 col-md-offset-1 mb20" ng-controller="WizardMinimalCtrl">
+				<h3 class="text-center mb20">Text Ad</h3>
+			</div>
+
+
+			<!-- Full Form wizard -->
+			<div class="col-md-12 col-lg-12">
+				<div class="panel panel-default panel-stacked panel-hovered mb20" ng-controller="FormWizardCtrl">
+					<div class="panel-body">
+						<ul class="list-unstyled form-wizard-tabs mb20">
+							<li ng-class="{active: steps[0]}">
+								<span class="text">Account Info</span>
+								<i class="fa fa-long-arrow-right"></i>
+							</li>
+							<li ng-class="{active: steps[1]}">
+								<span class="text">Ads Values</span>
+								<i class="fa fa-long-arrow-right"></i>
+							</li>
+							<li ng-class="{active: steps[2]}">
+								<span class="text">Ad Reach Type</span>
+							</li>
+						</ul>
+						<hr class="dashed mb20"/>
+
+						<!-- step 1 -->
+				
+               	<div class="panel-body">
+                <form class="form-horizontal col-lg-10" name="wizard-step-1" ng-show="steps[0]">
+						<table class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Description</th>
+								<th>Single Quantity Price</th>
+						   	</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Base Price</td>
+								<td><i class="fa fa-inr"></i> 0.50</td>
+							</tr>
+                            <tr>
+								<td>Location Selected <strong>(States)</strong>  <div class="right"><i class="fa fa-times note"></i></div></td>
+								<td><i class="fa fa-inr"></i> 0.05</td>
+						   </tr>
+                            <tr>
+								<td>Gender Selected <strong>(Male)</strong> <div class="right"><i class="fa fa-times note"></i></div></td>
+								<td><i class="fa fa-inr"></i> 0.05</td>
+							 </tr>
+                            <tr>
+								<td>Age Selected <strong>(30 to 50)</strong> <div class="right"><i class="fa fa-times note"></i></div></td>
+								<td><i class="fa fa-inr"></i> 0.05</td>
+							 </tr>
+                           <tr>
+								<td><strong>Total cost of single reach</strong></td>
+								<td><i class="fa fa-inr"></i> <strong>0.70</strong></td>
+					      </tr>
+						</tbody>
+					</table>
+                    
+                    <p>You are reach 1,40,000 members in grid area</p>
+                    
+                  <div class="clearfix">
+								<button type="submit" class="btn btn-primary right" ng-click="stepNext(1)">Next</button>
+							</div></form>
+						<!-- #end step 1 -->
+
+
+						<!-- step 2 -->
+						<form class="form-horizontal col-lg-10" name="wizard-step-2" ng-show="steps[1]">
+							<div class="form-group">
+								<div class="col-lg-10">
+									<div class="">
+									
+								<label class="col-md-6 control-label">Enter Your Target Value</label>
+								<div class="col-md-6">
+									<div class="has-success">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+							
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-lg-10">
+									<div class="">
+								
+								<label class="col-md-6 control-label">Cost Details</label>
+								<div class="col-md-6">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-inr"></i></span>
+										<input type="email" class="form-control" placeholder="Both Addon">
+										<span class="input-group-addon">0.70</span>
+									</div>
+							
+							</div>
+									</div>
+									
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<div class="col-lg-10">
+									<div class="">
+								
+								<label class="col-md-6 control-label">Invoice Payment</label>
+								<div class="col-md-6">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-inr"></i></span>
+										<input type="email" class="form-control" placeholder="Both Addon">
+									</div>
+							
+							</div>
+									</div>
+									
+								</div>
+							</div>
+                            
+							<div class="clearfix right">
+								<button type="button" class="btn btn-primary mr5" ng-click="stepNext(0)">Previous</button>
+								<button type="submit" class="btn btn-primary" ng-click="stepNext(2)">Next</button>
+							</div>
+						</form>
+						<!-- #end step 2 -->
+
+
+
+						<!-- step 3 -->
+						<div class="wizard-complete-msg text-center col-lg-8 col-lg-offset-2" ng-show="steps[2]">
+							<div layout layout-sm="column">
+                                    <div class="ui-radio">
+                                
+<label class="ui-radio-inline">
+<input type="radio" name="radioEg" checked="" class="md-radio-button">
+<span>Once</span>
+</label>
+
+<label class="ui-radio-inline">
+<input type="radio" name="radioEg">
+<span>Daily</span>
+</label>
+
+<label class="ui-radio-inline">
+<input type="radio" name="radioEg">
+<span>Weekly</span>
+</label>
+</div>
+	</div>
+    
+    <div layout layout-sm="column">
+                                   	
+					<div class="panel-body dat-pic" ng-controller="DatepickerDemoCtrl">
+						
+                        <div class="form-group">
+								<div class="col-lg-10">
+								<label class="col-md-6 control-label">Start Date</label>
+								<div class="col-md-6">
+									<div class="input-group">
+								<input type="text" class="form-control datepicker" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2025-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false"/>
+							<span class="input-group-btn">
+							<button type="button" class="btn btn-default ion ion-calendar" ng-click="open($event)"></i></button>
+								</span>
+							</div>
+							</div>
+						
+								</div>
+							</div>
+                        
+							</div>
+                            
+                            <div class="panel-body dat-bt" ng-controller="DatepickerDemoCtrl">
+                                                       
+						<div class="form-group">
+								<div class="col-lg-10">
+							<label class="col-md-6 control-label">End Date</label>
+								<div class="col-md-6">
+									<div class="input-group">
+								<input type="text" class="form-control datepicker" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2025-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false"/>
+							<span class="input-group-btn">
+							<button type="button" class="btn btn-default ion ion-calendar" ng-click="open($event)"></i></button>
+								</span>
+							</div>
+							
+							</div>
+							
+								</div>
+							</div>
+							</div>
+
+	</div>
+							<button type="button" class="btn btn-primary" ng-click="stepReset()">Pay Now</button>
+						</div>
+						<!-- #end step 3 -->
+
+					</div>
+				</div>
+			</div>
+			<!-- #end form wizard -->
+
+		</div> <!-- #end row -->
+
+
+
+	</div> <!-- #end page-wrap -->
+</div>

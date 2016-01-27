@@ -1,0 +1,66 @@
+{{define "layout"}}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{template "title"}}</title>
+
+    <link href="css/bootstra.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/styl.css" rel="stylesheet">
+
+
+</head>
+<body>
+  {{template "body"}}
+  
+<!--  <iframe src="http://localhost:3000" width="500px" height="500px"></iframe> -->
+  
+
+<!-- Mainly scripts -->
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="/static/js/inspinia.js"></script>
+    <script src="/static/js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+                simpleLoad(btn, false)
+            });
+        });
+
+        function simpleLoad(btn, state) {
+            if (state) {
+                btn.children().addClass('fa-spin');
+                btn.contents().last().replaceWith(" Loading");
+            } else {
+                setTimeout(function () {
+                    btn.children().removeClass('fa-spin');
+                    btn.contents().last().replaceWith(" Refresh");
+                }, 2000);
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>
+{{end}}

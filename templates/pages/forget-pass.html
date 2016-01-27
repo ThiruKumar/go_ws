@@ -1,0 +1,36 @@
+<script>
+function showDiv() {
+   document.getElementById('welcomeDiv').style.display = "block";
+}
+</script>
+<div class="page page-auth">
+
+	<div class="auth-container">
+		
+		<div class="form-head mb20">
+			<h1 class="site-logo h2 mb5 mt5 text-center text-uppercase text-bold"><a href="/">GeoGola</a></h1>
+		</div>
+
+		<div class="form-container">
+			<form class="form-horizontal" action="javascript:;">
+				<p class="small text-center">Enter your mobile number you've registered with you. We'll send you OTP.</p>
+                <div>
+				<md-input-container>
+					<label>Mobile Number</label>
+					<input type="email" placeholder="Enter your email-address">
+				</md-input-container>
+                <button type="button" name="answer" value="Show Div" onclick="showDiv()" class="btn btn-primary btn-block text-uppercase btn-lg show">Send</button>
+                </div>
+                
+                <div id="welcomeDiv"  style="display:none;" class="answer_list">
+                <md-input-container>
+					<label>Type Your OTP</label>
+					<input type="email" placeholder="Enter your email-address">
+				</md-input-container>
+				<a href="#/pages/reset-password"><button type="submit" class="btn btn-primary btn-block text-uppercase btn-lg">Proceed</button></a>
+                </div>
+			</form>
+		</div>
+		
+	</div> <!-- #end signin-container -->
+</div>

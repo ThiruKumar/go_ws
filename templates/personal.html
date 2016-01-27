@@ -1,0 +1,280 @@
+<div class="page page-ui-buttons">
+
+	<ol class="breadcrumb breadcrumb-small">
+		<li>Home</li>
+		<li class="active"><a href="#/personal">Personal</a></li>
+	</ol>
+
+
+	<div class="page-wrap">
+		
+		<div class="row">
+			<!-- input form -->
+			<div class="col-md-12 col-lg-12 col-sm-12">
+				<div class="panel panel-primary mb20 panel-hovered">
+					<div class="panel-heading">Personal Settings</div>
+					<div class="panel-body" ng-controller="MdInputDemo">
+						
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+						<md-content layout-padding>
+							<form name="userForm">
+								<div layout layout-sm="column">
+									<md-input-container style="width:100%;">
+										<label>GeoGola ID</label>
+										<input ng-model="user.company" disabled>
+									</md-input-container>
+									
+								</div>
+								<div layout layout-sm="column">
+									<md-input-container flex>
+										<label>First Name</label>
+										<input ng-model="user.firstName" placeholder="Placeholder text">
+									</md-input-container>
+									
+								</div>
+								<div layout layout-sm="column">
+                                    <div class="ui-radio">
+                                    <label class="ui-radio-inline">Gender</label>
+<label class="ui-radio-inline">
+<input type="radio" name="radioEg" checked="" class="md-radio-button">
+<span>Male</span>
+</label>
+
+<label class="ui-radio-inline">
+<input type="radio" name="radioEg">
+<span>Female</span>
+</label>
+</div>
+	</div>
+    
+   					<div layout layout-sm="column">
+							<label class="control-label small"><span tooltip-placement="right" tooltip="hi">Date of Birth <i class="fa fa-question"></i></span></label>
+					</div>
+                    
+                                <div layout layout-sm="column">
+									<md-input-container flex>
+									<label>Date</label>
+									<input placeholder="27">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Month</label>
+								<input placeholder="11">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Year</label>
+								<input placeholder="1986">
+								</md-input-container>
+								</div>
+                                
+                                <div layout layout-sm="column">
+                                    <div class="ui-radio">
+                                    <label class="ui-radio-inline">Married Status</label>
+<label class="ui-radio-inline">
+<input type="radio" name="radioms"  class="md-radio-button">
+<span>Single</span>
+</label>
+
+<label class="ui-radio-inline">
+<input type="radio" name="radioms" checked="">
+<span>Married</span>
+</label>
+</div>
+	</div>
+    
+    <div layout layout-sm="column">
+									<md-input-container flex>
+										<label>Spouse Name</label>
+										<input ng-model="user.firstName" placeholder="Placeholder text">
+									</md-input-container>
+									</div>
+                                    
+
+						<div layout layout-sm="column">
+							<label class="control-label small"><span tooltip-placement="right" tooltip="Why?">Date of Birth <i class="fa fa-question"></i>
+</span></label>
+						</div>
+                    
+                    <div layout layout-sm="column">
+									<md-input-container flex>
+									<label>Date</label>
+									<input placeholder="30">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Month</label>
+								<input placeholder="02">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Year</label>
+								<input placeholder="1991">
+								</md-input-container>
+								</div>
+                    
+                                 <div layout layout-sm="column">
+                                    <div class="ui-radio">
+                                   <label class="ui-radio-inline">
+<input type="radio" name="radiohc" checked="">
+<span>Have Children</span>
+</label>
+
+<label class="label label-success">Add</label>
+</div>
+	</div>  
+    
+    
+    <div layout layout-sm="column">
+                                
+									<md-input-container flex>
+									<label>Name</label>
+									<input>
+								</md-input-container>
+								</div> 
+                                
+                                <div layout layout-sm="column">
+                                    <div class="ui-radio">
+                                    <label class="ui-radio-inline">Gender</label>
+<label class="ui-radio-inline">
+<input type="radio" name="radioHG" checked="" class="md-radio-button">
+<span>Male</span>
+</label>
+
+<label class="ui-radio-inline">
+<input type="radio" name="radioHG">
+<span>Female</span>
+</label>
+</div>
+	</div>                              
+							</form>
+						</md-content>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                        <md-content layout-padding>
+							<form name="userForm">
+						
+                                    
+						<div layout layout-sm="column">
+							<label class="control-label small"><span tooltip-placement="right" tooltip="Why?">Date of Birth <i class="fa fa-question"></i>
+</span></label>
+						</div>
+                    
+                    <div layout layout-sm="column">
+									<md-input-container flex>
+									<label>Date</label>
+									<input placeholder="30">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Month</label>
+								<input placeholder="02">
+								</md-input-container>
+								<md-input-container flex>
+								<label>Year</label>
+								<input placeholder="1991">
+								</md-input-container>
+								</div>
+                    
+                                 
+                                
+                                
+                                
+                                <div layout layout-sm="column">
+                                <label class="ui-radio-inline">Current Status</label>
+                                    <div class="ui-radio">
+                                    
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms"  class="md-radio-button">
+<span>Student</span>
+</label>
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms" checked="">
+<span>Employee</span>
+</label>
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms" checked="">
+<span>Self Employee</span>
+</label>
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms" checked="">
+<span>Business</span>
+</label>
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms">
+<span>House Wife</span>
+</label>
+<label class="ui-radio-inline m-botom">
+<input type="radio" name="radioms">
+<span>Others</span>
+</label>
+
+</div>
+	</div>
+                                                                              
+                            <div class="form-group">
+							<label class="control-label">Select Proffession</label>
+							<div class="ui-checkbox ui-checkbox-primary">
+									<label class="ui-checkbox-inline">
+										<input type="checkbox" checked> 
+										<span>Engineer</span>
+									</label>
+									<label class="ui-checkbox-inline">
+										<input type="checkbox"> 
+										<span>Dr</span>
+									</label>
+									<label class="ui-checkbox-inline">
+										<input type="checkbox"> 
+										<span>Lawyer</span>
+									</label>
+							<label class="ui-checkbox-inline">
+										<input type="checkbox"> 
+										<span>CA</span>
+									</label>
+                                    <label class="ui-checkbox-inline">
+										<input type="checkbox" checked> 
+										<span>Others</span>
+									</label>
+						</div>
+					</div>  
+								
+                          
+						<div class="form-group">
+							<label class="control-label">Intersted Area</label>
+							<div class="ui-checkbox ui-checkbox-primary">
+									<label class="ui-checkbox-inline">
+										<input type="checkbox" checked> 
+										<span>News</span>
+									</label>
+									<label class="ui-checkbox-inline">
+										<input type="checkbox"> 
+										<span>Sports</span>
+									</label>
+									<label class="ui-checkbox-inline">
+										<input type="checkbox" checked> 
+										<span>Travel</span>
+									</label>
+							<label class="ui-checkbox-inline">
+										<input type="checkbox"> 
+										<span>Reading Books</span>
+									</label>
+						</div>
+					</div>  
+                    
+                    <div class="clearfix right">
+								<button class="btn btn-primary mr5" type="submit">Update</button>
+							</div> 
+                                
+							</form>
+						</md-content>
+                        </div>
+                        
+                        
+                        
+                        
+					</div>
+				</div>
+			</div> <!-- #col -->
+		</div> <!-- row -->
+
+	</div> <!-- #end page-wrap -->
+</div>

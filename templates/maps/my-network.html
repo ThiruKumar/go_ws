@@ -1,0 +1,81 @@
+<div class="page page-maps-google page-forms-elements page-dashboard" map-lazy-load="https://maps.google.com/maps/api/js"> <!-- lazyload map here -->  
+<!-- if google map not cached see this: https://github.com/allenhwkim/angularjs-google-maps/issues/165 -->
+
+	<ol class="breadcrumb breadcrumb-small">
+		<li>Home</li>
+		<li class="active"><a href="#/maps/google-map">Plant - Map view</a></li>
+	</ol>
+
+
+	<div class="page-wrap">
+
+		<!-- row -->
+		<div class="row">
+						
+			<!-- With Icon -->
+			<div class="col-md-12 col-lg-12" >
+				<div class="panel panel-default panel-stacked panel-hovered mb20" >
+					<div class="panel-heading">Plant Locations</div>
+					<div class="panel-body">
+						<map zoom="4" center="12, 80" ng-init="names=['24.4500','74.8700']">
+						<marker position="{{x[0]}},{{x[1]}}" icon="http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_red.png" animation="Animation.DROP" centered="true" title="{{x}}" ng-repeat="x in names"></marker>
+
+
+						</map>
+					</div>
+				</div>
+			</div>
+							
+		</div> <!-- #end row -->
+
+<!--<div class="row">
+	    
+            <div class="col-md-12 col-lg-12">
+				<div class="panel panel-lined panel-hovered mb20 table-responsive">
+					<div class="panel-heading text-cen">
+						My Total Network <span class="badge badge-xs badge-success net-num">22</span>
+						</div>
+					</div>
+            
+         
+				</div>
+                
+                
+                <div class="col-md-12 col-lg-12">
+				<div class="panel panel-lined panel-hovered mb20 table-responsive">
+					<div class="panel-heading">
+						My Network Details
+						</div>
+					<div class="panel-body">
+						<table class="table table-bordered table-striped table-hover"
+						ng-controller="ResponsiveTableDemoCtrl">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Geogola ID</th>
+								<th>Location</th>
+								<th>Join Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="data in responsiveData">
+							
+								<td>{{data.name}}</td>
+								<td>{{data.geogola}}</td>
+								<td>{{data.location}}</td>
+								<td>{{data.network}}</td>
+                                                     
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+            
+         
+				</div>
+
+				</div>-->
+		
+
+	</div> <!-- #end page wrap -->
+</div>

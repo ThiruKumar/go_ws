@@ -1,0 +1,242 @@
+<div class="page page-dashboard" ng-controller="DashboardCtrl">
+	
+	<div class="page-wrap">
+
+		<div class="row">
+			<!-- dashboard header -->
+			<div class="col-md-12">
+				<div class="dash-head clearfix mt15 mb20">
+					<div class="left">
+						<h4 class="mb5 text-light">Spending Payments</h4>
+						
+					</div>
+					<div class="right">
+                   <a href="#/wallet"><button type="button" class="btn btn-line-info btn-icon-inline" md-ink-ripple><i class="fa fa-inr"></i>All Payments</button></a>
+    <a href="#/wallet-earning"><button type="button" class="btn btn-line-info btn-icon-inline" md-ink-ripple><i class="fa fa-inr"></i>Earnings</button></a>
+   <a href="#/wallet-spending"><button type="button" class="btn btn-line-info btn-icon-inline" md-ink-ripple><i class="fa fa-inr"></i>Spending</button></a>
+					</div>
+				</div>
+			</div>
+		</div> <!-- #end row -->
+
+		<!-- mini boxes -->
+		<div class="row">
+			
+			<div class="col-md-4 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-success text-bold">2,000</h4>
+								<h5 class="text-light mb0">TOTAL CREDITS</h5>
+							</div>
+							<div class="right"><i class="fa fa-inr inr-font"></i></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-success">
+						<p class="mt0 mb0 left">Indian Bank</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-info text-bold">1,500</h4>
+								<h5 class="text-light mb0">TOTAL DEBITS</h5>
+							</div>
+							<div class="right"><i class="fa fa-inr inr-font"></i></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-info">
+						<p class="mt0 mb0 left">Indian Bank</p>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="panel panel-default mb20 mini-box panel-hovered">
+					<div class="panel-body">
+						<div class="clearfix">
+							<div class="info left">
+								<h4 class="mt0 text-pink text-bold">5,00</h4>
+								<h5 class="text-light mb0">TOTAL BALANCE</h5>
+							</div>
+							<div class="right"><i class="fa fa-inr inr-font"></i></div>
+						</div>
+					</div>
+					<div class="panel-footer clearfix panel-footer-sm panel-footer-pink">
+						<p class="mt0 mb0 left">Indian Bank</p>
+						</div>
+				</div>
+			</div>
+			<!-- #end mini boxes -->
+		</div> <!-- #end row -->
+
+		<div class="row">
+			<!-- style three -->
+			<div class="col-md-12 col-lg-12">
+		<ul class="list-unstyled right-elems">
+	<!-- profile drop -->
+	<li class="profile-drop hidden-xs dropdown" dropdown>
+		<a href="#/forms/add-payment-wallet"><button type="button" class="btn btn btn-primary right" md-ink-ripple><i class="fa fa-inr"></i>Add Payment</button></a>
+	</li>
+</ul>
+</div></div>
+        
+		<!-- row -->
+        <div class="row">
+			<!-- style three -->
+			<div class="col-md-12 col-lg-12 mb20">
+				<!-- tabs style -->
+				<tabset class="tabs-fill">
+					<tab heading="Withdraw">
+						<div class="clearfix">
+						
+                 <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Saravana Store</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998856</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 10/02/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Manju Groups</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20994576</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Cheque Payment</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,50</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 16/05/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-danger btn-sm">PENDING</button></h5>
+					</div>
+				</div>
+                
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Poorvika Mobiles</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998111</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 1,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 30/12/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>
+                
+							
+						</div>
+					</tab>
+					<tab heading="Campaign" active="filltwo.active">
+						<div class="clearfix">
+					
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Manju Groups</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20994576</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Cheque Payment</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,50</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 16/05/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-danger btn-sm">PENDING</button></h5>
+					</div>
+				</div>
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Saravana Store</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998856</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 10/02/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>                
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Poorvika Mobiles</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998111</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 1,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 30/12/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>
+                
+							
+						</div>
+					</tab>
+                    
+                    <tab heading="Others" active="fillthree.active">
+						<div class="clearfix">
+					
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Manju Groups</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20994576</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Cheque Payment</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,50</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 16/05/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-danger btn-sm">PENDING</button></h5>
+					</div>
+				</div>
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Saravana Store</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998856</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 3,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 10/02/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>                
+                
+                <div class="bdr-pay clearfix">
+					<div class="left">
+						<h4 class="mb5 text-light"><strong>Poorvika Mobiles</strong></h4>
+						<h5 class="mb5 text-light">Transfer ID: 20998111</h5>
+                        <h5 class="mb5 text-light"><strong>Mode of Payment:</strong> Transfer Amount</h5>
+					</div>
+					<div class="right mt10">
+						<h5 class="text-bold mb0 mt5"><i class="fa fa-inr"></i> 1,00</h5>
+                        <span sparkline type="bar" bar-color="#4CAF50">Date: 30/12/2015</span>
+                        <h5 class="text-bold mb0 mt5"><button class="btn btn-success btn-sm">SUCCESS</button></h5>
+					</div>
+				</div>
+                
+							
+						</div>
+					</tab>
+				</tabset>
+				<!-- #end tab styles -->
+			</div>
+			<!-- #end style three -->
+		</div>
+		<!-- #end row -->
+		<hr class="dashed"/>
+		 <!-- #end row -->
+
+	</div> <!-- #end page-wrap -->
+</div>

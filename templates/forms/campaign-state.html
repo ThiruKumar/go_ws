@@ -1,0 +1,64 @@
+<div class="page page-forms-elements page-dashboard page-ui-buttons">
+
+	<ol class="breadcrumb breadcrumb-small">
+		<li>Home</li>
+		<li class="active"><a href="#/forms/elements">Selected States</a></li>
+	</ol>
+
+
+	<div class="page-wrap">
+    
+    <div class="row">
+			<!-- dashboard header -->
+			<div class="col-md-12">
+				<div class="dash-head clearfix mt15 mb20">
+					<div class="left">
+						<h4 class="mb5 text-light">Select and Add State</h4>
+						
+					</div>
+					<div class="right">
+                    <button type="button" class="btn btn-line-info" md-ink-ripple>Step - 3</button>
+   					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- row -->
+		<div class="row">
+	
+					<!-- Selects -->
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="panel panel-default panel-hovered panel-stacked mb20">
+					<div class="panel-heading">States</div>
+					<div class="panel-body">
+						<form role="form">
+							<div ng-controller="SelectDemoCtrl">
+							
+								<!-- Multi Select -->
+								<div class="form-group">
+									<label class="control-label small">Add State</label>
+									<ui-select multiple ng-model="multipleDemo.colors" ng-disabled="disabled">
+										<ui-select-match placeholder="Select States...">{{$item}}</ui-select-match>
+										<ui-select-choices repeat="color in availableColors | filter:$select.search">
+											{{color}}
+										</ui-select-choices>
+									</ui-select>
+                                    <p class="text-danger text-right xsmall blank-space">One are more states added</p>
+								</div>	
+								
+							</div>
+<a href="#/gender-select"><button type="button" class="btn btn btn-primary right" md-ink-ripple>Next</button></a>
+<a href="#/target-area"><button type="button" class="btn btn btn-primary right">Back</button></a>
+						</form>
+                               
+					</div>
+				</div>
+			</div>
+			<!-- #end col-right -->
+
+		</div>
+		<!-- #end row -->
+      
+
+	</div> <!-- #end page-wrap -->
+</div>

@@ -1,0 +1,152 @@
+<script>
+function otpDiv() {
+   document.getElementById('otpDiv').style.display = "block";
+}
+</script>
+<div class="page page-auth">
+
+<div class="auth-container" id="sign-w">
+<div class="col-md-9 col-md-offset-1" ng-controller="WizardMinimalCtrl">
+				<h3 class="text-center mb20"><img src="images/clr-logo.png" alt="logo"></h3>
+			</div>
+
+    <div class="row">
+     
+    <div class="col-md-12 col-lg-12">
+				<div class="panel panel-stacked" ng-controller="FormWizardCtrl">
+					<div class="panel-body">
+						<ul class="list-unstyled form-wizard-tabs mb20">
+							<li ng-class="{active: steps[0]}">
+								<span class="text">Personal Info</span>
+								<i class="fa fa-long-arrow-right"></i>
+							</li>
+							<li ng-class="{active: steps[1]}">
+								<span class="text">Verification Details</span>
+								<i class="fa fa-long-arrow-right"></i>
+							</li>
+							<li ng-class="{active: steps[2]}">
+								<span class="text">Password Verification</span>
+							</li>
+						</ul>
+						<hr class="dashed"/>
+
+						<!-- step 1 -->
+				
+                
+                <form class="form-horizontal" name="wizard-step-1" ng-show="steps[0]">
+						<div class="form-container">
+			
+				<div class="form-group form-group-lg">
+							<div class="col-lg-10"><input type="text" class="form-control" placeholder="Enter Your Name"></div>
+							</div>
+               <div class="form-group form-group-lg">
+								<div class="col-lg-10"><input type="text" class="form-control" placeholder="Mobile Number"></div>
+                                <div class="col-lg-2 verfy">
+				<button type="button" name="answer" value="Otp Div" onclick="otpDiv()" class="btn btn-xs btn-primary right">Verify Number</button>
+                 
+				</div>
+							</div>
+                            
+                            <div class="form-group form-group-lg answer_list" id="otpDiv"  style="display:none;">
+								<div class="col-lg-10">
+									<input type="password" class="form-control" placeholder="Enter OTP here..."></div>
+                                <div class="col-lg-2 verfy">
+				<button type="button" name="answer" value="Otp Div" onclick="otpDiv()" class="btn btn-xs btn-primary right">Resend OTP</button>
+                 
+				</div>
+							</div>
+                            
+			  <div class="clearfix">
+					<button type="submit" class="btn btn-primary" ng-click="stepNext(1)">Next</button>
+				</div>
+             <div class="verfy">
+			<p class="small">Already have an account. <a href="#/pages/signin">Sign In Now</a></p>
+		</div>               
+                            	
+                
+		</div>
+        
+        
+                                    
+                
+                            </form>
+						<!-- #end step 1 -->
+
+						<!-- step 2 -->
+						<form class="form-horizontal" name="wizard-step-2" ng-show="steps[1]">
+							
+						<div class="form-container">
+			
+				<div class="form-group form-group-lg">
+					<input type="text" class="form-control" placeholder="Enter GeoGola Refferer ID">
+							</div>
+                <div class="clearfix">
+					<div class="ui-checkbox ui-checkbox-primary">
+						<label>
+							<input type="checkbox"> 
+							<span>I don't have Refferer Gola Id</span>
+						</label>
+                     </div>
+				</div>
+                <div class="clearfix">
+								<button type="button" class="btn btn-primary mr5" ng-click="stepNext(0)">Previous</button>
+								<button type="submit" class="btn btn-primary" ng-click="stepNext(2)">Next</button>
+							</div>
+		</div>
+							
+						</form>
+						<!-- #end step 2 -->
+
+
+
+						<!-- step 3 -->
+						<div class="wizard-complete-msg" ng-show="steps[2]">
+							
+    
+    <div layout layout-sm="column">
+                                     
+					<form class="form-horizontal" >
+							
+						<div class="form-container">
+			
+				<div class="form-group form-group-lg">
+				<input type="password" class="form-control" placeholder="Enter Password">
+							</div>
+				<div class="form-group form-group-lg">
+				<input type="password" class="form-control" placeholder="Retype Password">
+							</div>
+                <div class="clearfix">
+					<div class="ui-checkbox ui-checkbox-primary">
+						<label>
+							<input type="checkbox"> 
+							<span>I agree to the <a href="#" target="_blank">terms and conditions</a> for use.</span>
+						</label>
+                      
+					</div>
+				</div>
+		</div>
+				    
+					<div class="clearfix">
+							<button type="button" class="btn btn-primary" ng-click="stepReset()">Sign up</button>
+							</div>		
+						</form>
+                        
+
+	</div>
+							
+					</div>
+						<!-- #end step 3 -->
+
+				</div>
+			</div>
+			<!-- #end form wizard -->
+
+		</div>
+        
+   				
+		</div>
+  
+    
+   </div> 
+      
+</div>

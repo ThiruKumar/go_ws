@@ -1,0 +1,209 @@
+<div class="page page-maps-google page-forms-elements page-dashboard" map-lazy-load="https://maps.google.com/maps/api/js"> <!-- lazyload map here -->  
+<!-- if google map not cached see this: https://github.com/allenhwkim/angularjs-google-maps/issues/165 -->
+
+	<ol class="breadcrumb breadcrumb-small">
+		<li>Home</li>
+		<li class="active"><a href="#/maps/google-map">Location Settings</a></li>
+	</ol>
+
+
+	<div class="page-wrap">
+
+		<!-- row -->
+		<div class="row">
+						
+			<!-- With Icon -->
+			<div class="col-md-12 col-lg-12 col-sm-12">
+				<div class="panel panel-default panel-stacked panel-hovered mb20">
+					<div class="panel-heading">Location Marker</div>
+					<div class="panel-body">
+						<map zoom="4" center="-33, 151">
+						<marker position="-33.890542, 151.274856" icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png" animation="Animation.DROP" centered="true" title="You are here"></marker>
+						</map>
+					</div>
+				</div>
+			</div>
+							
+		</div> <!-- #end row -->
+
+<div class="row">
+	
+			<!-- col-left -->
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="panel panel-default panel-hovered panel-stacked mb20">
+					<div class="panel-heading">Location Details</div>
+					<div class="panel-body">
+						<form role="form" class="form-horizontal"> <!-- form horizontal acts as a row -->
+							<!-- with hint -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Country</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="India">
+									<p class="text-danger text-right xsmall">Country Option is India Only</p>
+								</div>
+							</div>
+                            
+                            <!-- Single Select -->
+								<div class="form-group">
+									<label class="col-md-3 control-label">Select State</label>
+									<div class="col-md-9">
+                                    <select class="form-control">
+										<option value="0" selected disabled>Tamil Nadu</option>
+										<option value="1">Goa</option>
+										<option value="2">Karnataka</option>
+										<option value="3">Kerala</option>
+										<option value="4">Punjab</option>
+										<option value="5">Gujarat</option>
+									</select>
+                                     </div>
+								</div>
+						
+                            <div class="form-group">
+									<label class="col-md-3 control-label">Select District</label>
+									<div class="col-md-9">
+                                    <select class="form-control">
+										<option value="0" selected disabled>Select</option>
+										<option value="1">Kanyakumari</option>
+										<option value="2">Chennai</option>
+										<option value="3">Coimbatore</option>
+										<option value="4">Dindigul</option>
+										<option value="5">Madurai</option>
+									</select>
+                                     </div>
+								</div>
+                            
+                            <div class="form-group">
+								<label class="col-md-3 control-label">Enter City</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label class="col-md-3 control-label">My Living Location</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="Pincode or Area">
+									<p class="text-danger text-right xsmall">Enter the pincode or area name</p>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label class="col-md-3 control-label">My Working Location</label>
+								<div class="col-md-9 has-success">
+									<input type="text" class="form-control" placeholder="Pincode or Area">
+									<p class="text-danger text-right xsmall">Enter the pincode or area name</p>
+								</div>
+							</div>
+																		
+							<!-- native select -->
+							<!--<div class="form-group">
+								<label class="col-md-3 control-label">Native Select</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option value="0" selected disabled>Select a fruit</option>
+										<option value="1">Apple</option>
+										<option value="2">Orange</option>
+										<option value="3">Grapes</option>
+										<option value="4">Pineapple</option>
+										<option value="5">Cherry</option>
+									</select>
+								</div>
+							</div>-->
+														
+							<!-- warning control -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Most Favorite Location</label>
+								<div class="col-md-9">
+									<div class="has-warning">
+										<input type="text" class="form-control">
+                                        <p class="text-danger text-right xsmall">Enter the pincode or area name</p>
+									</div>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label class="col-md-3 control-label"><span tooltip-placement="bottom" tooltip="GPS">GPS <i class="fa fa-question"></i></span></label>
+								<div class="col-md-9">
+									<div class="ui-toggle ui-toggle-sm ui-toggle-pink mb10">
+									<label class="ui-toggle-inline">
+										<input type="checkbox"> 
+										<span></span>
+									</label>
+									</div>
+								</div>
+							</div>
+                            				
+							<div class="clearfix right">
+								<button class="btn btn-primary mr5" type="submit">Submit</button>
+								<button class="btn btn-default">Cancel</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div> <!-- #end col-left -->
+            
+            <div class="col-md-12 col-sm-12 col-lg-12">
+				<div class="panel panel-default mb20 list-widget">
+                <div class="panel-heading">Frequently Reached Locations</div>
+					<ul class="list-unstyled clearfix">
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Anna Nagar</span>
+							<span class="badge badge-xs badge-primary count-num">10</span>
+                            <span><button type="button" class="btn btn-primary btn-icon-inline btn-sm add-btn" ng-click="addEvent()">
+				<i class="ion ion-plus"></i> Add Location </button></span>
+                            <span class="text someText">Geogola Entered some text</span>
+						</li>
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">West Mambalam</span>
+							<span class="badge badge-xs badge-info count-num">4</span>
+                            <span class="text someText">Geogola Entered some text</span>
+						</li>
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Tambaram</span>
+							<span class="badge badge-xs badge-success count-num">22</span>
+                            <span class="text someText">Geogola Entered some text</span>
+						</li>
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Perambur</span>
+							<span class="badge badge-xs badge-danger count-num">8</span>
+                            <span><button type="button" class="btn btn-pink btn-icon-inline btn-sm add-btn" ng-click="addEvent()">
+				<i class="ion ion-plus"></i> Add Location </button></span>
+                            <span class="text someText">Geogola Entered some text</span>
+						</li>
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Nungambakkam</span>
+							<span class="badge badge-xs badge-info count-num">5</span>
+                            <span class="text someText">Geogola Entered some text</span>
+						</li>
+						</ul>
+				</div>
+			</div>
+            
+            <div class="col-md-12 col-sm-12 col-lg-12">
+				<div class="panel panel-default mb20 list-widget">
+                <div class="panel-heading">Our Added Locations</div>
+					<ul class="list-unstyled clearfix">
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Anna Nagar</span>
+							<span class="badge badge-xs badge-primary count-num">10</span>
+						</li>
+						<li>
+							<i class="fa fa-location-arrow"></i>
+							<span class="text">Perambur</span>
+							<span class="badge badge-xs badge-info count-num">8</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+				</div>
+		
+
+	</div> <!-- #end page wrap -->
+</div>
