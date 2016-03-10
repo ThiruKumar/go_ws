@@ -1,0 +1,20 @@
+[LogstreamerInput]
+log_directory = "/var/log"
+file_match = 'auth.log'
+
+[PayloadEncoder]
+append_newlines = false
+
+[LogOutput]
+message_matcher = "TRUE"
+encoder = "PayloadEncoder"
+
+[PayloadEncoder]
+
+[influxdb]
+type = "HttpOutput"
+message_matcher = "Type == 'influx.formatted'"
+address = "http://localhost:8086"
+encoder = "PayloadEncoder"
+username = "admin"
+password = "admin"
